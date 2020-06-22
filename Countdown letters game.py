@@ -1,7 +1,3 @@
-#ALSO TRY ITERATION WHERE IT SEARCHES THROUGH LIST FOR WORDS WITH THOSE LETTERS
-#get rid of words > 9 letters- will save iteration power
-#experiment says time taken is 266 seconds 
-
 import random, string, time
 
 scores = {}
@@ -19,14 +15,12 @@ def game():
     wordlength = 3
     g=[]
                                                                                                                     
-
-    #g sees each word as a letter 
-                                                                                                                            
+                                                                                     
     letters = []
     random.shuffle(vowels)
     random.shuffle(consonants)
 
-    for i in range(9): #9
+    for i in range(9): 
         which = input("Vowel or consonant?").lower()
         if which == "c" or which == "consonant":
             choose = consonants[0].lower()
@@ -43,11 +37,11 @@ def game():
             vowels.remove(vowels[0])
 
     print ("READY")
-    #time.sleep(3)
+    time.sleep(3)
     print ("SET")
-    #time.sleep(3)
+    time.sleep(3)
     print ("GO!")
-    countdown =0 #30
+    countdown =30
 
     now = time.time()
     future = now + countdown
@@ -76,14 +70,9 @@ def game():
                                 wordjoin = ''.join([str(elem) for elem in word]) 
                                 g.append(wordjoin)
                             
-    #print (g)
+
     print (len(g))
-    f.close()
-
-
-                
-    #letters  = ["a","b","c","d","e","f","g","h","i"]
-          
+    f.close()          
 
     for i in scores: 
         print (i)
